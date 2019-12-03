@@ -1,0 +1,363 @@
+/* 
+ * @author: Annun;
+ * @Date: 2019-09-11;
+ * @Description: 通用电纸书 CSS 样式，微调样式请新建样式文件储存
+ * @Last Modified By: Annun;
+ * @Last Modified Time: 2019-10-28;
+ * 
+ */
+ @import 'Font';
+
+
+//  变量 
+@mixin imgStyle {
+	display: block;
+	width: 90%;
+	// max-width kindle 不支持，部分设备支持
+	max-width: 960px;
+	margin: 0 auto;
+	border-radius: 4px;
+}
+
+// 定义边框
+@mixin border {
+	border: 1px solid #cccccc;
+}
+
+// 全局配置
+
+// 页面边距
+// 设置全局字体，避免在没有字体时错乱
+body {
+	// margin: 5%; 移除，kindle 有边距处理
+	font-size: medium;  // 所有字体统一大小
+	font-family: STSong, KindleSong, serif;
+}
+
+// 标题
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-align: left;
+
+	// 清除全局代码样式带来的背景
+	& code {
+		background-color: transparent !important;
+	}
+}
+
+/* 标题一 篇*/
+h1 {
+	font-size: 1.5em;
+	margin: 0.1em 0;
+	text-indent: 0em;
+	text-align: right;
+	line-height: 1.5em;
+}
+
+/* 标题二 章*/
+h2 {
+	font-size: 1.4em;
+	margin: 0.8em 0;
+	color: #0033CC;
+	text-indent: 0em;
+}
+
+/* 标题三 节*/
+h3 {
+	font-size: 1.3em;
+	margin: 0.6em 0;
+	text-indent: 0em;
+}
+
+/* 标题四*/
+h4 {
+	font-size: 1.2em;
+	margin: 0.4em 0;
+	font-weight: 800;
+}
+
+/* 标题五*/
+h5 {
+	font-size: 1.1em;
+	margin: 0.3em 0;
+
+}
+
+/* 标题六 */
+h6 {
+	font-size: 1em;
+	margin: 0.2em 0;
+}
+
+// 段落
+p {
+	line-height: 1.5;
+	text-align: left; // kindle 默认两端对齐，中英混排会出现字距大段空白，如纯中文可注释
+	text-indent: 2em;
+	margin: 4px 0;
+}
+
+// 图片
+figure {
+	width: 100%;
+	margin: 0;
+	img {
+		@include imgStyle;
+	}
+
+	figcaption {
+		text-align: center;
+	}
+}
+
+// 表格
+table {
+	border-collapse: collapse;
+	@include border;
+	border-radius: 4px;
+	width: 90%;
+	margin-left: 5%;
+
+	&.nowrap {
+		white-space: nowrap !important;
+		font-size: small;
+	}
+
+	caption {
+		padding: 0.5em 0;
+	}
+
+	& td,
+	& th {
+		@include border;
+		line-height: 1.5;
+		padding: 0 8px;
+	}
+}
+
+
+// 引用
+blockquote {
+	border-left: 4px solid #3d7e9a;
+	margin: 0;
+	padding: 8px;
+	padding-left: 12px;
+	margin: 10px 0;
+	background-color: #eee;
+	color: #333;
+
+	p {
+		padding: 0;
+		margin: 0;
+		text-indent: 0
+	}
+}
+
+// 代码
+pre {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	background-color: #eeeeee;
+	border: 1px solid #cccccc;
+	padding: 10px;
+	border-radius: 4px;
+	font-family: Code;
+	line-height: 1.5;
+	color: #333333;
+
+	code {
+		// 清除全局带来的影响
+		padding: 0;
+		font-weight: normal;
+		color: #333333;
+		background-color: transparent !important;
+
+	}
+}
+
+// 全局单个行内代码
+code {
+	font-family: Code;
+	padding: 0 4px;
+	font-weight: 300;
+	color: #ff5077;
+	background-color: #fff5f5;
+	border-radius: 2px;
+	margin: 0 4px;
+}
+
+// 无序列表
+ul {
+	padding-left: 2em;
+
+	li {
+		line-height: 1.75;
+
+		p {
+			text-indent: 0;
+		}
+	}
+}
+
+// 无序列表
+ol {
+	padding-left: 2em;
+
+	li {
+		line-height: 1.5;
+
+		p {
+			text-indent: 0;
+		}
+	}
+}
+
+// 定义列表
+dl {
+	dt {
+		margin-bottom: 8px;
+	}
+
+	dd {
+		line-height: 1.5;
+		margin-bottom: 12px;
+	}
+}
+
+// 分割线
+hr {
+	border: 1px solid #dddddd;
+	margin-bottom: 1em;
+}
+
+// 链接处理
+a {
+	font-style: italic;
+
+	sup {
+		font-style: normal;
+		padding: 4px;
+		font-size: small;
+	}
+}
+
+// 计算机键盘映射键 
+kbd {
+	box-sizing: border-box;
+	border-radius: 2px;
+	padding: 0 4px;
+	border: 1px solid #cccccc;
+	margin: 0 4px;
+}
+
+
+// 公用
+
+// 文字右对齐
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+/* 提示 */
+.tips {
+	margin: 0;
+	padding: 8px;
+	margin: 10px 0;
+	background-color: #eee;
+	border-radius: 4px;
+	color: #333;
+
+	p {
+		padding: 0;
+		margin: 0;
+		text-indent: 0
+	}
+}
+
+
+
+// 特殊页面
+/* 扉页 */
+.flyPage {
+	margin: 0;
+	padding: 0;
+	width: 100vw !important;
+	height: 100vh !important;
+
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+// 版权页
+.copyright {
+	box-sizing: border-box;
+	padding: 4vw;
+
+	p {
+		text-indent: 0;
+	}
+
+	// 图书在版编目（CIP）数据
+	.cip {
+		padding: 0.2em 2em;
+	}
+
+	// 出版社信息
+	.press-info {
+		padding: 0.2em 2em 0.2em 5em;
+	}
+}
+
+// 大章节标题处理
+.title span.chapter {
+	font-size: 50%;
+	color: #999999;
+}
+
+.title span.subtitle {
+	font-size: 80%;
+}
+
+// 图标处理
+.icon {
+	float: left;
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0.12em 0.4em 0.12em 0;
+	border-radius: 50%;
+	overflow: hidden;
+
+	&.safari-oreilly-com {
+		width: 10%;
+	}
+
+	&~p {
+		text-indent: 0;
+	}
+
+}
+
+.safari-icon {
+	width: 120px;
+	float: left;
+	margin: 0 8px 8px 0;
+}
+
+// 二维码 占屏幕1/4左右
+.QRcode {
+	img {
+		width: 25% !important;
+	}
+}
+
+
+

@@ -1,0 +1,78 @@
+/* 
+ * @author: Annun;
+ * @Date: 2019-11-04;
+ * @Description: 字体处理
+ * @Last Modified By: Annun;
+ * @Last Modified Time: 2019-10-28;
+ * @
+ * 
+ */
+
+// 谷歌免费字体
+// 思源黑体(代码) 
+@font-face {
+	font-family: Code;
+	src: url("../Fonts/SourceCodePro.ttf");
+}
+
+// 方正商用免费字体
+// 方正楷体简体
+// @font-face {
+// 	font-family: fzkt;
+// 	src: url("../Fonts/FZKTJW.TTF");
+// }
+// // 方正仿宋简体
+// @font-face {
+// 	font-family: fzfs;
+// 	src: url("../Fonts/FZFSJW.TTF");
+// }
+// // 方正黑体简体
+// @font-face {
+// 	font-family: fzht;
+// 	src: url("../Fonts/FZHTJW.TTF");
+// }
+// // 方正书宋简体
+// @font-face {
+// 	font-family: fzss;
+// 	src: url("../Fonts/FZSSJW.TTF");
+// }
+
+// kindle 内置字体
+// 华文书宋
+@font-face {
+	font-family: KindleSong;
+	src: url("../Fonts/STSongMedium.ttf");
+}
+// 华文黑体
+@font-face {
+	font-family: KindleHeiti;
+	src: url("../Fonts/STHeitiMedium.ttf");
+}
+// 华文楷体
+@font-face {
+	font-family: KindleKai;
+	src: url("../Fonts/STKaiMedium.ttf");
+}
+// 华文中圆
+@font-face {
+	font-family: KindleYuan;
+	src: url("../Fonts/STYuanMedium.ttf");
+}
+
+
+
+// 针对 Kindle 优化
+// kindle 内置字体
+// 简体中文
+// 四款简体中文字体来自华文字体。
+// 宋体                   font-family: STSong, serif;
+// 黑体                   font-family: STHeiti, san-serif;
+// 楷体                   font-family: STKai, serif;
+// 圆体                   font-family: STYuan, san-serif;
+
+// 繁体中文
+// 两款繁体中文字体是来自蒙纳字体。
+// 宋體                   font-family: "Song T", serif;
+// 黑體                   font-family: "MYing Hei T", san-serif;
+
+

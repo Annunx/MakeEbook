@@ -1,0 +1,36 @@
+
+/* 
+ * @author: Annun;
+ * @Date: 2019-09-11;
+ * @Description: 特定设备优化
+ * @Last Modified By: Annun;
+ * @Last Modified Time: 2019-10-28;
+ * 
+ */
+
+
+// 对于 KF8 CSS 样式，使用媒体查询 @media amzn-kf8。仅适用于 KF8 格式。
+@media amzn-kf8 {
+
+	// 全局默认字体 宋体
+	body {
+		font-family: STSong, KindleSong, serif;
+	}
+}
+
+
+// 对于 Mobi CSS 样式，使用媒体查询 @media amzn-mobi。仅适用于 Mobi 格式。
+@media amzn-mobi {
+
+	// 全局默认字体 宋体
+	body {
+		font-family: STSong, KindleSong, serif;
+	}
+
+}
+
+
+// iPad（3、Air、Mini）格式设置。将之用于任何 iPad。
+@media (device-width: 768px) {
+
+}
